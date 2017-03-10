@@ -25,7 +25,7 @@ class Trie:
         k = prefix[0]
         
         if k not in trie.edges:
-            return 0
+            return False
         else:
             prefix = prefix[1:]
             return trie.count_prefix(trie.edges[k], prefix)
@@ -37,7 +37,7 @@ class Trie:
         k = word[0]
 
         if k not in trie.edges:
-            return 0
+            return False
         else:
             word = word[1:]
             return trie.count_words(trie.edges[k], word)
