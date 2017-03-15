@@ -1,3 +1,5 @@
+# https://www.hackerrank.com/challenges/ctci-connected-cell-in-a-grid
+
 from itertools import product
 
 matrix =[
