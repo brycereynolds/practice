@@ -1,5 +1,5 @@
 # https://www.hackerrank.com/challenges/ctci-connected-cell-in-a-grid
-
+from functools import reduce
 from itertools import product
 
 matrix =[
@@ -23,7 +23,7 @@ def process_cell(matrix, row, col):
 
     for x, y in product([-1, 0, 1], repeat=2):
         # (-1,-1), (-1,0), (-1,1), etc
-        count += process_cell(matrix, row + x, col +y)
+        count += process_cell(matrix, row + x, col + y)
 
     return count
 
